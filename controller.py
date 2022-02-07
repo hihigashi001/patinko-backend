@@ -1,4 +1,5 @@
 import json
+from typing import Optional
 from typing import List
 
 from fastapi import APIRouter
@@ -7,37 +8,37 @@ from pydantic import BaseModel
 router = APIRouter(prefix="/patinko")
 
 class Item(BaseModel):
-    yuu_time: any 
-    day_time: any
-    dai_number: any
-    model_name: any
-    bonus: any
-    now_roud_count: any
-    total_round_count: any
-    last_dedama: any
-    round_per_en: any
+    yuu_time: Optional[str] = None
+    day_time: Optional[str] = None
+    dai_number: Optional[str] = None
+    model_name: Optional[str] = None
+    bonus: Optional[str] = None
+    now_roud_count: Optional[str] = None
+    total_round_count: Optional[str] = None
+    last_dedama: Optional[str] = None
+    round_per_en: Optional[str] = None
 
 class Item_total(BaseModel):
-    day_time: any
-    dai_number: any
-    model_name: any
-    total_bonus: any
-    total_round_count: any
-    total_last_dedama: any
-    ago1_dedama: any
-    ago1_round: any
-    ago2_dedama: any
-    ago2_round: any
-    ago3_dedama: any
-    ago3_round: any
-    ago4_dedama: any
-    ago4_round: any
-    ago5_dedama: any
-    ago5_round: any
-    ago6_dedama: any
-    ago6_round: any
-    ago7_dedama: any
-    ago7_round: any
+    day_time: Optional[str] = None
+    dai_number: Optional[str] = None
+    model_name: Optional[str] = None
+    total_bonus: Optional[str] = None
+    total_round_count: Optional[str] = None
+    total_last_dedama: Optional[str] = None
+    ago1_dedama: Optional[str] = None
+    ago1_round: Optional[str] = None
+    ago2_dedama: Optional[str] = None
+    ago2_round: Optional[str] = None
+    ago3_dedama: Optional[str] = None
+    ago3_round: Optional[str] = None
+    ago4_dedama: Optional[str] = None
+    ago4_round: Optional[str] = None
+    ago5_dedama: Optional[str] = None
+    ago5_round: Optional[str] = None
+    ago6_dedama: Optional[str] = None
+    ago6_round: Optional[str] = None
+    ago7_dedama: Optional[str] = None
+    ago7_round: Optional[str] = None
     
 
 @router.get("/akasaka_all")

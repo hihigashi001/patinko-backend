@@ -171,3 +171,21 @@ INFO:     Shutting down
 INFO:     Waiting for application shutdown.
 INFO:     Application shutdown complete.
 INFO:     Finished server process [7101]
+Traceback (most recent call last):
+  File "pydantic/validators.py", line 709, in pydantic.validators.find_validators
+TypeError: issubclass() arg 1 must be a class
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/patinko-backend/main.py", line 5, in <module>
+    import controller
+  File "/root/patinko-backend/controller.py", line 9, in <module>
+    class Item(BaseModel):
+  File "pydantic/main.py", line 204, in pydantic.main.ModelMetaclass.__new__
+  File "pydantic/fields.py", line 488, in pydantic.fields.ModelField.infer
+  File "pydantic/fields.py", line 419, in pydantic.fields.ModelField.__init__
+  File "pydantic/fields.py", line 539, in pydantic.fields.ModelField.prepare
+  File "pydantic/fields.py", line 801, in pydantic.fields.ModelField.populate_validators
+  File "pydantic/validators.py", line 718, in find_validators
+RuntimeError: error checking inheritance of <built-in function any> (type: builtin_function_or_method)
