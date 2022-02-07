@@ -1,0 +1,163 @@
+python3: error while loading shared libraries: libpython3.9.so.1.0: cannot open shared object file: No such file or directory
+python3: error while loading shared libraries: libpython3.9.so.1.0: cannot open shared object file: No such file or directory
+python3: error while loading shared libraries: libpython3.9.so.1.0: cannot open shared object file: No such file or directory
+INFO:     Started server process [24567]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://116.80.80.54:8000 (Press CTRL+C to quit)
+INFO:     122.209.217.26:50494 - "GET /patinko/akasaka_real_time HTTP/1.1" 200 OK
+INFO:     122.209.217.26:50507 - "GET /patinko/akasaka_real_time HTTP/1.1" 200 OK
+INFO:     122.209.217.26:50524 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:50535 - "GET /patinko/akasaka_real_time HTTP/1.1" 200 OK
+INFO:     122.209.217.26:50547 - "GET /patinko/akasaka_total HTTP/1.1" 200 OK
+INFO:     122.209.217.26:50571 - "GET /patinko/boomtengin_real_time HTTP/1.1" 200 OK
+INFO:     122.209.217.26:50656 - "GET /patinko/boomtengin_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:50676 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:50691 - "POST /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:50699 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 129, in handle_events
+    event = self.conn.next_event()
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/h11/_connection.py", line 485, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/h11/_util.py", line 77, in _reraise_as_remote_protocol_error
+    raise self
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/h11/_connection.py", line 467, in next_event
+    event = self._extract_next_receive_event()
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/h11/_connection.py", line 409, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/h11/_readers.py", line 81, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+INFO:     122.209.217.26:50844 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [24567]
+INFO:     Started server process [25012]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://116.80.80.54:8000 (Press CTRL+C to quit)
+INFO:     122.209.217.26:51144 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:51157 - "GET /patinko/akasaka_total HTTP/1.1" 200 OK
+INFO:     122.209.217.26:51175 - "GET /patinko/akasaka_real_time HTTP/1.1" 200 OK
+INFO:     122.209.217.26:51294 - "GET /patinko/akasaka_total HTTP/1.1" 200 OK
+INFO:     122.209.217.26:51313 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:51323 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:51446 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:51579 - "POST /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:51585 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:51623 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:51767 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:51776 - "POST /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:51781 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:51788 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:51791 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:51871 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:52488 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:52562 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     35.220.229.69:58724 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.46:39486 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.46:40798 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.46:58782 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/starlette/routing.py", line 685, in __call__
+    await self.default(scope, receive, send)
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/starlette/routing.py", line 579, in not_found
+    raise HTTPException(status_code=404)
+starlette.exceptions.HTTPException
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 129, in handle_events
+    event = self.conn.next_event()
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/h11/_connection.py", line 485, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/h11/_util.py", line 77, in _reraise_as_remote_protocol_error
+    raise self
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/h11/_connection.py", line 467, in next_event
+    event = self._extract_next_receive_event()
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/h11/_connection.py", line 409, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/h11/_readers.py", line 85, in maybe_read_from_IDLE_client
+    matches = validate(
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/h11/_util.py", line 91, in validate
+    raise LocalProtocolError(msg)
+h11._util.RemoteProtocolError: illegal request line: bytearray(b'SM')
+INFO:     80.82.77.139:38314 - "GET / HTTP/1.1" 404 Not Found
+INFO:     80.82.77.139:43046 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 129, in handle_events
+    event = self.conn.next_event()
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/h11/_connection.py", line 485, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/h11/_util.py", line 77, in _reraise_as_remote_protocol_error
+    raise self
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/h11/_connection.py", line 467, in next_event
+    event = self._extract_next_receive_event()
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/h11/_connection.py", line 409, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/h11/_readers.py", line 81, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+INFO:     130.211.54.158:51548 - "GET / HTTP/1.1" 404 Not Found
+INFO:     122.209.217.26:60135 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:60140 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:60253 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:60337 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:60338 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:60357 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:60358 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:60447 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:60448 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:60462 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:60469 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:60471 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:60487 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:60488 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:60594 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:60595 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+Traceback (most recent call last):
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/uvicorn/protocols/http/h11_impl.py", line 129, in handle_events
+    event = self.conn.next_event()
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/h11/_connection.py", line 485, in next_event
+    exc._reraise_as_remote_protocol_error()
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/h11/_util.py", line 77, in _reraise_as_remote_protocol_error
+    raise self
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/h11/_connection.py", line 467, in next_event
+    event = self._extract_next_receive_event()
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/h11/_connection.py", line 409, in _extract_next_receive_event
+    event = self._reader(self._receive_buffer)
+  File "/root/patinko-backend/venv/lib/python3.9/site-packages/h11/_readers.py", line 81, in maybe_read_from_IDLE_client
+    raise LocalProtocolError("illegal request line")
+h11._util.RemoteProtocolError: illegal request line
+INFO:     122.209.217.26:61416 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:61417 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:61463 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:61464 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:61464 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:61463 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     78.187.140.28:45646 - "GET / HTTP/1.0" 404 Not Found
+INFO:     64.62.197.212:23296 - "GET / HTTP/1.1" 404 Not Found
+INFO:     122.209.217.26:54195 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:54195 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:54217 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:54468 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:53947 - "GET /patinko/akasaka_real_time HTTP/1.1" 200 OK
+INFO:     122.209.217.26:53963 - "GET /patinko/akasaka_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:54146 - "GET /patinko/akasaka_total HTTP/1.1" 200 OK
+INFO:     122.209.217.26:54168 - "GET /patinko/boomtengin_real_time HTTP/1.1" 200 OK
+INFO:     122.209.217.26:54168 - "GET /patinko/boomtengin_all HTTP/1.1" 200 OK
+INFO:     122.209.217.26:54199 - "GET /patinko/boomtengin_total HTTP/1.1" 200 OK
+INFO:     122.209.217.26:55441 - "POST /patinko/akasaka_total HTTP/1.1" 422 Unprocessable Entity
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [25012]

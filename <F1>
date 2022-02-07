@@ -120,7 +120,7 @@ def create_file(json_lists: List[Item_total]):
     new_json = []
     for json_list in json_lists:
         new_json.append({
-          "day_time": json_list.day_time,
+          "today": json_list.today,
           "dai_number": json_list.dai_number,
           "model_name": json_list.model_name,
           "total_bonus": json_list.total_bonus,
@@ -189,7 +189,7 @@ def create_file(json_lists: List[Item_total]):
     new_json = []
     for json_list in json_lists:
         new_json.append({
-          "day_time": json_list.day_time,
+          "today": json_list.today,
           "dai_number": json_list.dai_number,
           "model_name": json_list.model_name,
           "total_bonus": json_list.total_bonus,

@@ -3,9 +3,10 @@
 1. venv で Python 実行環境構築
 
 '''command
-python -m venv venv
-.\venv\Scripts\activate
-pip install -r .\requirements.txt
+python3 -m venv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
+python3 main.py
 '''
 
 ## 仕様

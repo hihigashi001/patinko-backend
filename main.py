@@ -8,9 +8,6 @@ app = FastAPI()
 
 app.include_router(controller.router)
 
-
-app = FastAPI()
-
 origins = ["*"]
 
 app.add_middleware(
@@ -22,4 +19,4 @@ app.add_middleware(
 )
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", port=8000, reload=False)
+    uvicorn.run("main:app", host="116.80.80.54", port=8000, reload=False)
