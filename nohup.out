@@ -161,3 +161,13 @@ INFO:     Shutting down
 INFO:     Waiting for application shutdown.
 INFO:     Application shutdown complete.
 INFO:     Finished server process [25012]
+INFO:     Started server process [7101]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://116.80.80.54:8000 (Press CTRL+C to quit)
+INFO:     122.209.217.26:50865 - "POST /patinko/akasaka_total HTTP/1.1" 422 Unprocessable Entity
+INFO:     122.209.217.26:61647 - "GET /patinko/boomtengin_total HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [7101]

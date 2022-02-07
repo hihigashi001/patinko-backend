@@ -7,37 +7,37 @@ from pydantic import BaseModel
 router = APIRouter(prefix="/patinko")
 
 class Item(BaseModel):
-    yuu_time: str
-    day_time: str
-    dai_number: str
-    model_name: str
-    bonus: str
-    now_roud_count: str
-    total_round_count: str
-    last_dedama: str
-    round_per_en: str
+    yuu_time: any 
+    day_time: any
+    dai_number: any
+    model_name: any
+    bonus: any
+    now_roud_count: any
+    total_round_count: any
+    last_dedama: any
+    round_per_en: any
 
 class Item_total(BaseModel):
-    day_time: str
-    dai_number: str
-    model_name: str
-    total_bonus: str
-    total_round_count: str
-    total_last_dedama: str
-    ago1_dedama: str
-    ago1_round: str
-    ago2_dedama: str
-    ago2_round: str
-    ago3_dedama: str
-    ago3_round: str
-    ago4_dedama: str
-    ago4_round: str
-    ago5_dedama: str
-    ago5_round: str
-    ago6_dedama: str
-    ago6_round: str
-    ago7_dedama: str
-    ago7_round: str
+    day_time: any
+    dai_number: any
+    model_name: any
+    total_bonus: any
+    total_round_count: any
+    total_last_dedama: any
+    ago1_dedama: any
+    ago1_round: any
+    ago2_dedama: any
+    ago2_round: any
+    ago3_dedama: any
+    ago3_round: any
+    ago4_dedama: any
+    ago4_round: any
+    ago5_dedama: any
+    ago5_round: any
+    ago6_dedama: any
+    ago6_round: any
+    ago7_dedama: any
+    ago7_round: any
     
 
 @router.get("/akasaka_all")
