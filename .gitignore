@@ -4,3 +4,4 @@ dist
 *.spec
 build
 config.ini
+nohup.out
