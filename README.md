@@ -12,4 +12,4 @@ python3 main.py
 ## 仕様
 
 fastApiでjsonファイルを作って表示するだけソース見て理解できるやつ
-
+homeのstart.shから起動
