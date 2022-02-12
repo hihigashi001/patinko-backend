@@ -1,9 +1,12 @@
+import os
 import json
 from typing import Optional
 from typing import List
 
 from fastapi import APIRouter
 from pydantic import BaseModel
+
+
 
 router = APIRouter(prefix="/patinko")
 
@@ -40,6 +43,18 @@ class Item_total(BaseModel):
     ago7_dedama: Optional[str] = None
     ago7_round: Optional[str] = None
     
+
+@router.get("/akasaka_detail_url_list")
+def read_root():
+    files = os.listdir("./data/dai_detail/akasaka")
+    json_load = json.load(files)
+    return json_load
+
+@router.get("/boomtengin_detail_url_list")
+def read_root():
+    files = os.listdir("./data/dai_detail/boomtengin")
+    json_load = json.load(files)
+    return json_load
 
 @router.get("/akasaka_detail/{dai_number}")
 def read_root(dai_number):
