@@ -113,8 +113,7 @@ def create_file(dai_number, json_lists: List[Item]):
           "round_per_en": json_list.round_per_en,
           "first_bonus_round": json_list.first_bonus_round
         })
-    output_filename = open(f'data/dai_detail/akasaka/{dai_number}.json', 'r',encoding="utf-8_sig")
-    with open(output_filename.name, 'w', encoding="utf-8") as f:
+    with open(f'data/dai_detail/akasaka/{dai_number}.json', 'w', encoding="utf-8_sig") as f:
         json.dump(new_json, f, ensure_ascii=False)
 
 
