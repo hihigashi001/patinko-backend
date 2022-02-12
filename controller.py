@@ -58,13 +58,13 @@ def read_root():
 
 @router.get("/akasaka_detail/{dai_number}")
 def read_root(dai_number):
-    json_open = open(f'data/dai_detail/akasaka/{dai_number}.json', 'r',encoding="utf-8_sig")
+    json_open = open(f'data/dai_detail/akasaka/{dai_number}', 'r',encoding="utf-8_sig")
     json_load = json.load(json_open)
     return json_load
 
 @router.get("/boomtengin_detail/{dai_number}")
 def read_root(dai_number):
-    json_open = open(f'data/dai_detail/boomtengin/{dai_number}.json', 'r',encoding="utf-8_sig")
+    json_open = open(f'data/dai_detail/boomtengin/{dai_number}', 'r',encoding="utf-8_sig")
     json_load = json.load(json_open)
     return json_load
 
@@ -108,7 +108,7 @@ def create_file(dai_number, json_lists: List[Item]):
           "round_per_en": json_list.round_per_en,
           "first_bonus_round": json_list.first_bonus_round
         })
-    with open(f'data/dai_detail/boomtengin/{dai_number}.json', 'w', encoding="utf-8_sig") as f:
+    with open(f'data/dai_detail/boomtengin/{dai_number}', 'w', encoding="utf-8_sig") as f:
         json.dump(new_json, f, ensure_ascii=False)
         
 
@@ -127,7 +127,7 @@ def create_file(dai_number, json_lists: List[Item]):
           "round_per_en": json_list.round_per_en,
           "first_bonus_round": json_list.first_bonus_round
         })
-    with open(f'data/dai_detail/akasaka/{dai_number}.json', 'w', encoding="utf-8_sig") as f:
+    with open(f'data/dai_detail/akasaka/{dai_number}', 'w', encoding="utf-8_sig") as f:
         json.dump(new_json, f, ensure_ascii=False)
 
 
