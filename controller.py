@@ -47,13 +47,13 @@ class Item_total(BaseModel):
 @router.get("/akasaka_detail_url_list")
 def read_root():
     files = os.listdir("./data/dai_detail/akasaka")
-    json_load = json.load(files)
+    json_load = json.loads(files)
     return json_load
 
 @router.get("/boomtengin_detail_url_list")
 def read_root():
     files = os.listdir("./data/dai_detail/boomtengin")
-    json_load = json.load(files)
+    json_load = json.loads(files)
     return json_load
 
 @router.get("/akasaka_detail/{dai_number}")
