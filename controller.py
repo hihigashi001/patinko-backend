@@ -59,7 +59,6 @@ def read_root():
     json_load = json.load(json_open)
     return json_load
 
-
 @router.get("/akasaka_total")
 def read_root():
     json_open = open('data/akasaka_total.json', 'r',encoding="utf-8_sig")
@@ -94,9 +93,9 @@ def create_file(dai_number, json_lists: List[Item]):
           "round_per_en": json_list.round_per_en,
           "first_bonus_round": json_list.first_bonus_round
         })
-    output_filename = open(f'data/dai_detail/boomtengin/{dai_number}.json', 'r',encoding="utf-8_sig")
-    with open(output_filename.name, 'w', encoding="utf-8") as f:
+    with open(f'data/dai_detail/boomtengin/{dai_number}.json', 'w', encoding="utf-8_sig") as f:
         json.dump(new_json, f, ensure_ascii=False)
+        
 
 @router.post("/akasaka_detail/{dai_number}")
 def create_file(dai_number, json_lists: List[Item]):
@@ -131,8 +130,7 @@ def create_file(json_lists: List[Item]):
           "last_dedama": json_list.last_dedama,
           "round_per_en": json_list.round_per_en
         })
-    output_filename = open('data/akasaka_all.json', 'r',encoding="utf-8_sig")
-    with open(output_filename.name, 'w', encoding="utf-8") as f:
+    with open('data/akasaka_all.json', 'w', encoding="utf-8_sig") as f:
         json.dump(new_json, f, ensure_ascii=False)
 
 
@@ -162,8 +160,7 @@ def create_file(json_lists: List[Item_total]):
           "ago6_round": json_list.ago6_round,
           "ago7_round": json_list.ago7_round,
         })
-    output_filename = open('data/akasaka_total.json', 'r',encoding="utf-8_sig")
-    with open(output_filename.name, 'w', encoding="utf-8") as f:
+    with open('data/akasaka_total.json', 'w', encoding="utf-8_sig") as f:
         json.dump(new_json, f, ensure_ascii=False)
 
 
@@ -182,8 +179,7 @@ def create_file(json_lists: List[Item]):
           "round_per_en": json_list.round_per_en,
           "first_bonus_round": json_list.first_bonus_round
         })
-    output_filename = open('data/boomtengin_all.json', 'r',encoding="utf-8_sig")
-    with open(output_filename.name, 'w', encoding="utf-8") as f:
+    with open('data/boomtengin_all.json', 'w', encoding="utf-8_sig") as f:
         json.dump(new_json, f, ensure_ascii=False)
 
 
@@ -213,6 +209,5 @@ def create_file(json_lists: List[Item_total]):
           "ago6_round": json_list.ago6_round,
           "ago7_round": json_list.ago7_round,
         })
-    output_filename = open('data/boomtengin_total.json', 'r',encoding="utf-8_sig")
-    with open(output_filename.name, 'w', encoding="utf-8") as f:
+    with open('data/boomtengin_total.json', 'w', encoding="utf-8_sig") as f:
         json.dump(new_json, f, ensure_ascii=False)
