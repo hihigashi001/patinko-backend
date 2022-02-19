@@ -21,6 +21,15 @@ class Item(BaseModel):
     round_per_en: Optional[str] = None
     first_bonus_round: Optional[str] = None
 
+class ItemSiteSeven(BaseModel):
+    day_time: Optional[str] = None
+    store_name: Optional[str] = None
+    model_name: Optional[str] = None
+    dai_number: Optional[str] = None
+    now_roud_count: Optional[str] = None
+    total_round_count: Optional[str] = None
+    bonus: Optional[str] = None
+
 class Item_total(BaseModel):
     day_time: Optional[str] = None
     dai_number: Optional[str] = None
@@ -93,6 +102,29 @@ def read_root():
     json_open = open('data/boomtengin_total.json', 'r',encoding="utf-8_sig")
     json_load = json.load(json_open)
     return json_load
+
+@router.get("/site_seven_all")
+def read_root():
+    json_open = open('data/site_seven_all.json', 'r',encoding="utf-8_sig")
+    json_load = json.load(json_open)
+    return json_load
+
+
+@router.post("/site_seven_all")
+def create_file(json_lists: List[ItemSiteSeven]):
+    new_json = []
+    for json_list in json_lists:
+        new_json.append({
+          "day_time": json_list.day_time,
+          "store_name": json_list.store_name,
+          "model_name": json_list.model_name,
+          "dai_number": json_list.dai_number,
+          "now_roud_count": json_list.now_roud_count,
+          "total_round_count": json_list.total_round_count,
+          "bonus": json_list.bonus,
+        })
+    with open('data/site_seven_all.json', 'w', encoding="utf-8_sig") as f:
+        json.dump(new_json, f, ensure_ascii=False)
 
 
 @router.post("/boomtengin_detail/{dai_number}")
