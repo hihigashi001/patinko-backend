@@ -6,8 +6,6 @@ from typing import List
 from fastapi import APIRouter
 from pydantic import BaseModel
 
-
-
 router = APIRouter(prefix="/patinko")
 
 class Item(BaseModel):
@@ -121,7 +119,7 @@ def create_file(json_lists: List[ItemSiteSeven]):
           "dai_number": json_list.dai_number,
           "now_roud_count": json_list.now_roud_count,
           "total_round_count": json_list.total_round_count,
-          "bonus": json_list.bonus,
+          "bonus": json_list.bonus
         })
     with open('data/site_seven_all.json', 'w', encoding="utf-8_sig") as f:
         json.dump(new_json, f, ensure_ascii=False)
@@ -177,7 +175,8 @@ def create_file(json_lists: List[Item]):
           "now_roud_count": json_list.now_roud_count,
           "total_round_count": json_list.total_round_count,
           "last_dedama": json_list.last_dedama,
-          "round_per_en": json_list.round_per_en
+          "round_per_en": json_list.round_per_en,
+          "first_bonus_round": json_list.first_bonus_round
         })
     with open('data/akasaka_all.json', 'w', encoding="utf-8_sig") as f:
         json.dump(new_json, f, ensure_ascii=False)
